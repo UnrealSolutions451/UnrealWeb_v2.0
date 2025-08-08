@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Call Assistants - Unreal Solutions</title>
+  <link rel="icon" type="image/png" href="/src/assets/images/favicon.png">
+  <link rel="stylesheet" href="src/css/main.css">
+
+  <style>
+  /* Service page image styling */
+  .service-img {
+    display: block;
+    max-width: 950px;
+    max-height: 700px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 1.5rem auto; /* Center horizontally + bottom margin */
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  @media (max-width: 700px) {
+    .service-img {
+      max-width: 90%;
+      max-height: none;
+    }
+  }
+
+  .book-btn {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    background: linear-gradient(90deg, #6366f1, #38bdf8);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease;
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  .book-btn:hover {
+    background: linear-gradient(90deg, #4f46e5, #0ea5e9);
+  }
+
+  .btn-container {
+    text-align: center;
+  }
+  /* Audio player section */
+    .audio-section {
+      background: rgba(24, 24, 27, 0.92);
+      padding: 2rem;
+      border-radius: 1rem;
+      color: #fff;
+      text-align: center;
+      margin-top: 3rem;
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.1);
+    }
+
+    .audio-section h2 {
+      color: #38bdf8;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .audio-section p {
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+
+    .audio-section audio {
+      width: 100%;
+      max-width: 500px;
+      outline: none;
+      background-color: rgba(56, 189, 248, 0.1);
+      border-radius: 10px;
+      padding: 0.5rem;
+      box-shadow: 0 4px 15px rgba(56, 189, 248, 0.2);
+    }
+</style>
+
+</head>
+<body>
+  <script src="src/js/app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const bg = new GridBackground(document.body);
+      new Navbar(document.body);
+
+      const contentSection = document.createElement('section');
+      contentSection.style.cssText = `
+        background: rgba(24,24,27,0.92);
+        border-radius: 1.6rem;
+        padding: 2rem;
+        margin-top: 2rem;
+        color: #fff;
+      `;
+      contentSection.innerHTML = `
+        <h1 style="text-align: center; color: #38bdf8; margin-bottom: 1rem; font-size:30px;">
+          AI Calling Assistant</h1>
+        <img src="src/assets/images/AiCalling.jpg" class="service-img" alt="Web Development">
+        <h2 style="text-align: center; color: #38bdf8;">
+            Let AI Talk Business for You.</h2>
+        <p style=" text-align: center; line-height:1.6; font-size:1.05rem;">
+          The AI Calling Assistant by Unreal Solutions handles your outbound and inbound calls with human-like voice interactions — booking appointments, answering queries, qualifying leads, and more. 24/7, scalable, and never misses a call.
+        </p>
+
+        <h2 style=" color: #38bdf8; font-size: 36px; margin-left: 40px; margin-top:50px;">
+          What is the AI Calling Assistant? </h2>
+      <p style=" margin-left: 40px; line-height:1.4; font-size:1.2rem;">
+        Your Smartest Team Member — On the Phone.<br><br>
+        Our AI Calling Assistant is a conversational AI system that makes or receives calls just like a human. It speaks naturally, understands intent, and responds intelligently — helping your business run smoother while cutting operational costs.<br><br>
+        It can:<br>
+        <ul style=" font-size:1.2rem;">
+            <li>✅ Make thousands of outbound calls automatically</li>
+            <li>✅ Answer inbound customer queries in real-time</li>
+            <li>✅ Book appointments, confirm orders, and take feedbacks</li>
+            <li>✅ Qualify leads with smart follow-up questions</li>
+            <li>✅ Integrate with CRMs, booking systems, and more</li>
+            
+            <br>
+            </ul>
+        </p>
+
+        <h2 style=" color: #38bdf8; font-size: 36px; margin-left: 40px; margin-top:50px;">Why Choose Our AI Assistant? </h2>
+      <p style=" margin-left: 40px; line-height:1.4; font-size:1.2rem;">
+        Smarter Conversations. Better Results.<br><br>
+        Benefits:
+        <ol style="font-size:1.2rem;">
+            <li>Conversational AI – Understands and responds like a real person</li>
+            <li>24/7 Availability – No missed calls, no time restrictions</li>
+            <li>Cost-Effective – Replace or support human agents at a fraction of the cost</li>
+            <li>Real-Time Insights – Track call performance, customer responses, and intent</li>
+            <li>Custom Integration – Connect with your CRM, calendar, or booking system</li>
+            <li>Secure & Compliant – Built with data privacy in mind</li><br>
+          </ol>
+        </p>
+
+        <h2 style="margin-left: 40px; color: #38bdf8; font-size: 36px;  margin-top:50px;">How It Works: </h2>
+         <p style="  line-height:1.4; font-size:1.2rem;margin-left: 40px;">
+           Simple Steps to Deploy Your AI Assistant.<br><br>
+            <ol style=" margin-left: 40px; font-size:1.2rem;">
+             <li>Tell Us Your Call Flow<br>
+              We design the conversation — scripts, FAQs, responses, and triggers.<br><br></li>
+             
+              <li>Train the AI on Your Use Case<br>
+                Our system learns your domain, products, and processes
+                <br><br>
+              </li>
+
+              <li>Go Live & Monitor Results<br>
+                  Start making/receiving calls — with full dashboards, logs, and analytics.</li>
+              <br>
+              </ol>
+            </p>
+            <p style=" text-align: center; line-height:1.4; font-size:1.2rem;margin-left: 40px;">Whether you’re a startup, service provider, or enterprise — our AI Calling Assistant helps you automate communication and deliver a better customer experience, at scale.</p>
+            <div class="btn-container">
+              <a href="index.html#contact" class="book-btn">
+                Book a Free Demo Call</a>
+            </div>
+
+      `;  
+      bg.contentContainer.appendChild(contentSection);
+
+      // AUDIO PLAYER SECTION
+      const audioSection = document.createElement('section');
+      audioSection.className = "audio-section";
+      audioSection.innerHTML = `
+        <h2>🎧 AI Call Assistant Demo</h2>
+        <p>Let AI Handle Your Calls — So You Can Handle Your Business.</p>
+        <audio controls>
+          <source src="src/assets/audio/ai-call-demo.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      `;
+      bg.contentContainer.appendChild(audioSection);
+
+      // Footer inside container
+      const footer = document.createElement('footer');
+      footer.style.cssText = `
+        text-align: center;
+        color: #aaa;
+        padding: 1rem;
+        margin-top: 3rem;
+      `;
+      footer.innerHTML = '&copy; 2025 Unreal Solutions. All rights reserved.';
+      bg.contentContainer.appendChild(footer);
+    });
+  </script>
+</body>
+</html>

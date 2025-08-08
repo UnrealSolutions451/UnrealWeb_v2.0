@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ERP Systems - Unreal Solutions</title>
+  <link rel="icon" type="image/png" href="/src/assets/images/favicon.png">
+  <link rel="stylesheet" href="src/css/main.css">
+
+  <style>
+  /* Service page image styling */
+  .service-img {
+    display: block;
+    max-width: 700px;
+    max-height: 450px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 1.5rem auto; /* Center horizontally + bottom margin */
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  @media (max-width: 700px) {
+    .service-img {
+      max-width: 90%;
+      max-height: none;
+    }
+  }
+
+  .book-btn {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    background: linear-gradient(90deg, #6366f1, #38bdf8);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease;
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  .book-btn:hover {
+    background: linear-gradient(90deg, #4f46e5, #0ea5e9);
+  }
+
+  .btn-container {
+    text-align: center;
+  }
+</style>
+
+</head>
+<body>
+  <script src="src/js/app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const bg = new GridBackground(document.body);
+      new Navbar(document.body);
+
+      const contentSection = document.createElement('section');
+      contentSection.style.cssText = `
+        background: rgba(24,24,27,0.92);
+        border-radius: 1.6rem;
+        padding: 2rem;
+        margin-top: 2rem;
+        color: #fff;
+      `;
+      contentSection.innerHTML = `
+        <h1 style="text-align: center; color: #38bdf8; margin-bottom: 1rem; font-size:30px;">
+          ERP & Management Systems</h1>
+        <img src="src/assets/images/erp1.jpg" class="service-img" alt="Web Development">
+        <h2 style="text-align: center; color: #38bdf8;">
+            Smarter Systems. Streamlined Success.</h2>
+        <p style=" text-align: center; line-height:1.6; font-size:1.05rem;">
+          At Unreal Solutions, we design powerful, custom-built ERP and management systems that simplify operations, centralize data, and help your business grow — faster and smarter.
+        </p>
+
+        <h2 style=" color: #38bdf8; font-size: 36px; margin-left: 40px; margin-top:50px;">
+          What We Offer: </h2>
+      <p style=" margin-left: 40px; line-height:1.4; font-size:1.2rem;">
+        Complete ERP & Business Management Solutions.<br><br>
+        Our ERP and management systems are tailored to your unique business workflows — no clutter, no complexity. Just smart, scalable solutions that help you track, manage, and optimize everything from a single dashboard.<br><br>
+        We develop custom systems for:<br>
+        <ul style=" font-size:1.2rem;">
+            <li>Inventory & Stock Management</li>
+            <li>Sales & Customer Relationship Management (CRM)</li>
+            <li>HR & Employee Management</li>
+            <li>Finance & Billing</li>
+            <li>Project & Task Management</li>
+            <li>Multi-branch or Franchise Operations</li>
+            <li>Educational Institutions (School/College ERP)</li>
+            <li>Hospital or Clinic Management</li>
+            <br>
+            </ul>
+        </p>
+
+        <h2 style=" color: #38bdf8; font-size: 36px; margin-left: 40px; margin-top:50px;">Why Businesses Choose Us? </h2>
+      <p style=" margin-left: 40px; line-height:1.4; font-size:1.2rem;">
+        Designed for Efficiency. Built for Growth.<br><br>
+        
+        <ol style="font-size:1.2rem;">
+            <li>Fully Customizable – Built around your business, not a generic template.</li>
+            <li>User-Friendly Interface – Easy for your team to learn and use.</li>
+            <li>Cloud-Based or On-Premise – Access your data securely from anywhere.</li>
+            <li>Real-Time Reports & Dashboards – Make informed decisions fast.</li>
+            <li>Role-Based Access Control – Keep operations secure and organized.</li>
+            <li>Mobile Friendly – Manage your business on-the-go.</li><br>
+          </ol>
+        </p>
+
+        <h2 style="margin-left: 40px; color: #38bdf8; font-size: 36px;  margin-top:50px;">How It Works: </h2>
+         <p style="  line-height:1.4; font-size:1.2rem;">
+          Your ERP, Your Way – In 3 Simple Steps<br><br>
+            <ol style=" margin-left: 40px; font-size:1.2rem;">
+             <li>Discovery & Planning<br>
+              We understand your processes, pain points, and goals.<br><br></li>
+             
+              <li>Custom Development<br>
+                We build your ERP with the exact modules and features you need.<br><br></li>
+
+              <li>Deployment & Training<br>
+                  We launch your system and train your team for maximum productivity.</li>
+              <br>
+              </ol>
+            </p>
+
+            <h2 style="text-align:center; margin-left: 40px; color: #38bdf8; font-size: 36px;  margin-top:50px;">Ready to Streamline Your Business Operations?</h2>
+
+            <div class="btn-container">
+        <a href="index.html#contact" class="book-btn">Get Your Custom ERP Solution</a>
+      </div>
+
+      `;  
+      bg.contentContainer.appendChild(contentSection);
+
+        // Add footer inside the grid background container
+      const footer = document.createElement('footer');
+      footer.style.cssText = `
+        text-align: center;
+        color: #aaa;
+        padding: 1rem;
+        margin-top: 3rem;
+      `;
+      footer.innerHTML = '&copy; 2025 Unreal Solutions. All rights reserved.';
+      bg.contentContainer.appendChild(footer);
+
+    });
+  </script>
+  
+</body>
+</html>

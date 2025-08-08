@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.5;
+  color: #111827;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  scroll-margin-top: 80px; /* For navbar offset */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none !important;
+  }
+  
+  section {
+    padding: 4rem 1rem !important;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+
+@media (max-width: 768px) {
+  .hero-image img {
+    border-radius: 2rem !important;   /* More rounded on small screens */
+   
+  }
+}
+
+.know-more-btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(90deg, #6366f1, #38bdf8);
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: background 0.3s;
+}
+
+.know-more-btn:hover {
+  background: linear-gradient(90deg, #4f46e5, #0ea5e9);
+}
+.audio-section {
+  background: rgba(24, 24, 27, 0.92);
+  padding: 2rem;
+  border-radius: 1rem;
+  color: #fff;
+  text-align: center;
+  margin-top: 3rem;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.1);
+}
+
+.audio-section h2 {
+  color: #38bdf8;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.audio-section p {
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.audio-section audio {
+  width: 100%;
+  max-width: 500px;
+  outline: none;
+  background-color: rgba(56, 189, 248, 0.1);
+  border-radius: 10px;
+  padding: 0.5rem;
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.2);
+}
+
