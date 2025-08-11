@@ -79,16 +79,18 @@ class Navbar {
       borderRadius: '0 16px 16px 0'
     });
     sidebar.innerHTML = `
-      <div style="font-size: 1.6rem; font-weight: bold; color: #a5b4fc; margin-bottom: 2rem; letter-spacing: 1px; text-shadow: 0 2px 18px #38bdf888">
-        Unreal Solutions
-      </div>
-      <a href="#home" class="sidebar-link" style="color:#c7d2fe; font-size:1.1rem; text-decoration:none; margin-bottom:1.1rem;">Home</a>
-      <a href="#about" class="sidebar-link" style="color:#c7d2fe; font-size:1.1rem; text-decoration:none; margin-bottom:1.1rem;">About</a>
-      <a href="#services" class="sidebar-link" style="color:#c7d2fe; font-size:1.1rem; text-decoration:none; margin-bottom:1.1rem;">Services</a>
-      <a href="#contact" class="sidebar-link" style="color:#c7d2fe; font-size:1.1rem; text-decoration:none;">Contact</a>
-      <button class="close-sidebar" style="margin-top:auto;color:#818cf8;background:transparent;border:none;font-size:2rem;cursor:pointer;align-self:flex-end;">&times;</button>
-    `;
+  <div style="font-size: 1.6rem; font-weight: bold; color: #a5b4fc; margin-bottom: 2rem; letter-spacing: 1px; text-shadow: 0 2px 18px #38bdf888">
+    Unreal Solutions
+  </div>
+  <a href="/index.html" class="sidebar-link" style="color:#c7d2fe; font-size:1.1rem; text-decoration:none; margin-bottom:1.1rem;">Home</a>
+  <a href="/index.html#about" class="sidebar-link" style="color:#c7d2fe; font-size:1.1rem; text-decoration:none; margin-bottom:1.1rem;">About</a>
+  <a href="/index.html#services" class="sidebar-link" style="color:#c7d2fe; font-size:1.1rem; text-decoration:none; margin-bottom:1.1rem;">Services</a>
+  <a href="/index.html#contact" class="sidebar-link" style="color:#c7d2fe; font-size:1.1rem; text-decoration:none;">Contact</a>
+  <button class="close-sidebar" style="margin-top:auto;color:#818cf8;background:transparent;border:none;font-size:2rem;cursor:pointer;align-self:flex-end;">&times;</button>
+`;
+
     document.body.appendChild(sidebar);
+
 
     // Create overlay
     const overlay = document.createElement('div');
@@ -191,12 +193,25 @@ nav.innerHTML = `
 
     // Sidebar link clicks: close sidebar & smooth scroll
     sidebar.querySelectorAll('.sidebar-link').forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        toggleSidebar(false);
-        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-      });
-    });
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    toggleSidebar(false);
+
+    const href = this.getAttribute('href');
+
+    // If it's a full page link (e.g., index.html#about) go there
+    if (href.includes('.html')) {
+      window.location.href = href;
+    } else {
+      // Same page smooth scroll
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  });
+});
+
 
     // Responsive logic: hide nav-links and show menu on small screens
     function updateForScreen() {
