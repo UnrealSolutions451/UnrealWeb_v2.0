@@ -353,7 +353,7 @@ class Hero {
         </div>
         
         <div class="hero-image">
-          <img src="./src/assets/images/UsBg.jpeg" 
+          <img src="./src/assets/images/ngFbanner.jpg" 
                alt="Futuristic technology solutions" 
                loading="lazy">
         </div>
@@ -651,3 +651,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
  
 });
+
